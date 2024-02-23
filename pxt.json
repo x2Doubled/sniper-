@@ -3,7 +3,9 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "pxt-lantern": "github:felixtsu/pxt-lantern#v0.2.1"
+        "pxt-lantern": "github:felixtsu/pxt-lantern#v0.2.1",
+        "Mouse+ extension by Yu-Hayate": "github:Yu-Hayate/Yu-hayates_Mouse#v1.0.4",
+        "Custom Keybind Extension": "github:Brohann3214/custom-keybind-extension#ce1cb5acda5cd438592e38da4aaab10b73b46c64"
     },
     "files": [
         "main.blocks",

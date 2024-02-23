@@ -1,6 +1,17 @@
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-	
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (true) {
+    	
+    }
 })
+Keybinds.setSimulatorKeymap(
+Keybinds.PlayerNumber.ONE,
+Keybinds.CustomKey.UP,
+Keybinds.CustomKey.UP,
+Keybinds.CustomKey.UP,
+Keybinds.CustomKey.UP,
+Keybinds.CustomKey.LEFT_CLICK,
+Keybinds.CustomKey.RIGHT_CLICK
+)
 scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -137,7 +148,9 @@ let start = sprites.create(img`
     ................................
     `, SpriteKind.Enemy)
 start.setPosition(80, 95)
-let Sniper = sprites.create(img`
+Mouse.DrawMouse(
+true,
+img`
     . . . . . . . f . . . . . . . . 
     . . . . . . . f . . . . . . . . 
     . . . . . . . f . . . . . . . . 
@@ -154,7 +167,11 @@ let Sniper = sprites.create(img`
     . . . . . . . f . . . . . . . . 
     . . . . . . . f . . . . . . . . 
     . . . . . . . f . . . . . . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(Sniper, 100, 100)
-multilights.addLightSource(Sniper, 13)
+    `,
+16,
+16
+)
+multilights.addLightSource(Mouse.mouseSprite(), 13)
 multilights.toggleLighting(true)
+info.setScore(0)
+let lastimestop = game.runtime()
