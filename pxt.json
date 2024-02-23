@@ -2,7 +2,8 @@
     "name": "sniper ",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "pxt-lantern": "github:felixtsu/pxt-lantern#v0.2.1"
     },
     "files": [
         "main.blocks",
